@@ -127,3 +127,6 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.User'
+
+# Code16 メールバックエンドを設定
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

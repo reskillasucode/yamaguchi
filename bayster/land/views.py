@@ -10,6 +10,8 @@ from .models import Land, LandReview
 class LandListView(ListView):
     model = Land
     template_name = 'land/land_list.html'
+    context_object_name = 'land_list'
+    ordering = ['-applied_date']  # 申請日の降順でソート
 
 class LandReviewView(CreateView):
     form_class = LandReviewForm
